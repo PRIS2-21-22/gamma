@@ -52,6 +52,8 @@ class NumeroDifuso:
         else:
             return "("+str(self.valores[0])+","+str(self.valores[1])+","+str(self.valores[2])+","+str(self.valores[3])+")"
             
+    def invertir (self):
+        return self       
             
 
 num1 = NumeroDifuso(1,2,4)
