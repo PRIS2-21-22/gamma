@@ -53,12 +53,20 @@ class NumeroDifuso:
             return "("+str(self.valores[0])+","+str(self.valores[1])+","+str(self.valores[2])+","+str(self.valores[3])+")"
             
     def invertir (self):
-        return self       
-            
+        if len(self.valores) == 3:
+            return NumeroDifuso(float("-inf"),self.valores[0],self.valores[1]),NumeroDifuso(self.valores[1],self.valores[2],float("inf"))
+        else:
+            return NumeroDifuso(float("-inf"),self.valores[0],self.valores[1]),NumeroDifuso(self.valores[2],self.valores[3],float("inf"))    
 
-num1 = NumeroDifuso(1,2,4)
-num2 = NumeroDifuso(1,2,4)
+##Varias Pruebas del software
+def test():
+    num1 = NumeroDifuso(float("-inf"),2,3,4)
+    num2 = NumeroDifuso(1,2,4)
 
-print(num1.suma(num2).tostring())
-print(num1.tostring() + " - " + num2.tostring() + " = " +num1.resta(num2).tostring())
-print(num1.division(num2).tostring())
+    print(num1.invertir()[0].tostring() + " " + num1.invertir()[1].tostring())
+    print(num1.suma(num2).tostring())
+    print(num1.tostring() + " - " + num2.tostring() + " = " +num1.resta(num2).tostring())
+    print(num1.division(num2).tostring())
+
+##Ejecuta las pruebas
+test()
