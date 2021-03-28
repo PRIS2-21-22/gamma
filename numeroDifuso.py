@@ -1,5 +1,3 @@
-import sys
-
 class NumeroDifuso:
     valores = []
     def __init__(self, a:float, b:float, c:float, d:float = None):
@@ -51,12 +49,12 @@ class NumeroDifuso:
             return "("+str(self.valores[0])+","+str(self.valores[1])+","+str(self.valores[2])+")"
         else:
             return "("+str(self.valores[0])+","+str(self.valores[1])+","+str(self.valores[2])+","+str(self.valores[3])+")"
-            
+
     def invertir (self):
         if len(self.valores) == 3:
             return NumeroDifuso(float("-inf"),self.valores[0],self.valores[1]),NumeroDifuso(self.valores[1],self.valores[2],float("inf"))
         else:
-            return NumeroDifuso(float("-inf"),self.valores[0],self.valores[1]),NumeroDifuso(self.valores[2],self.valores[3],float("inf"))    
+            return NumeroDifuso(float("-inf"),self.valores[0],self.valores[1]),NumeroDifuso(self.valores[2],self.valores[3],float("inf"))
 
 ##Varias Pruebas del software
 def test():
