@@ -1,9 +1,7 @@
 class NumeroDifuso:
-    
-    """Esta clase represanta un numero difuso y contiene las operaciones basicas (suma, resta, produto, división e inverso) de este tipo de números"""
     valores = []
+    #Este es el contructor de la clase, puede crear triangulos o trapezoides en función de si se le pasa 3 (Tirangulo)  o 4 (Trapezoide) parámentros.
     def __init__(self, a:float, b:float, c:float, d:float = None):
-        """Este es el contructor de la clase, puede crear triangulos o trapezoides en función de si se le pasa 3 (Tirangulo)  o 4 (Trapezoide) parámentros"""
         if d==None:
             self.valores = [a,b,c]
         else:
